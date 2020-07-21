@@ -25,21 +25,44 @@ for (let i = 1; i < sectionCount+1; i++) {
 
 // select all the li elements that have the .navbar_link
 const links = document.querySelectorAll('.navbar_link');
+const sections = document.querySelectorAll('section');
+
 
 for (let i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
         // first remove active_link class from all a elements
         for (let j = 0; j < links.length; j++) {
             links[j].classList.remove('active_link');
-            document.querySelector(`#section${i+1}`).classList.remove('your-active-class');
+            sections[j].classList.remove('active-section');
         }
         // now add to this a element
         links[i].classList.add('active_link');
-        document.querySelector(`#section${i+1}`).classList.add('your-active-class');
+        document.querySelector(`#section${i+1}`).classList.add('active-section');
+    })
+
+    sections[i].addEventListener('scroll', function() {
+        if (section[i].getBoundingClientRect() <= 150 && section[i] >= 150) {
+            section[i].classList.add('active-section');
+        } else {
+            section[i].classList.remove('active-section');
+        }
     })
 }
 
+function makeActive() {
+    for (const section of sections) {
+      const box = section.getBoundingClientRect();
+      console.log(box);
+      // You can play with the values in the "if" condition to further make it more accurate. 
+      if (box.top <= 150 && box.bottom >= 150) {
+        // Apply active state on the current section and the corresponding Nav link.
+      } else {
+        // Remove active state from other section and corresponding Nav link.
+      }
+    }
+  }
 
+  makeActive();
 
 
 
