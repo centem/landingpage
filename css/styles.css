@@ -280,7 +280,7 @@ section.active-section .landing__container::after {
 
     #navbar__list {
         display: block;
-        margin: 1px;
+        margin: 2px;
     }
 
 }
