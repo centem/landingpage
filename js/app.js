@@ -72,6 +72,14 @@ window.addEventListener('scroll', function (event) {
     }
 }, false);
 
+function menu() {
+    var menu = document.getElementById("navbar__list_2");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+}
 
 
 

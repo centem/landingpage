@@ -58,7 +58,7 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-ul {
+#navbar__list {
     width: 100%;
     background: #000;
     height: 50px;
@@ -72,11 +72,11 @@ ul {
     align-items: center;
 }
 
-ul li {
+#navbar__list li {
     list-style: none;
 }
 
-ul li a {
+#navbar__list li a {
     color: #fff;
     line-height: 50px;
     box-sizing: border-box;
@@ -95,6 +95,14 @@ ul li a {
 .active-link {
     background-color: #fff;
     color: #000;
+}
+
+#navbar__list_2  {
+    display: none;
+}
+
+.icon {
+    display: none;
 }
 
 /* Header Styles */
@@ -243,7 +251,8 @@ section.active-section .landing__container::after {
     h1 {
         font-family: 'Fira Sans', sans-serif;
         font-size: 2em;
-        margin: 2em 1rem;
+        margin: 1em 1rem;
+        display: inline-block;
     }
     
     h2 {
@@ -260,12 +269,15 @@ section.active-section .landing__container::after {
     }
 
     main {
-        margin: 10px;
+        margin: 5px;
     }
     
     .main-hero {
         min-height: 5vh;
         padding-top: 2px;
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
     }
     
     section {
@@ -276,11 +288,59 @@ section.active-section .landing__container::after {
 
     header {
         margin: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     #navbar__list {
-        display: block;
+        display: none;
         margin: 2px;
+    }
+
+    .icon {
+        display: inline;
+    }
+
+    .fa-bars {
+        color: white;
+    }
+
+    #navbar__list_2 {
+        width: 100%;
+        background: #000;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        letter-spacing: 0;
+        left: 0;
+        right: 0;  
+    }
+
+    #navbar__list_2 li {
+        list-style: none;
+        display: block;
+    }
+
+    #navbar__list_2 li a {
+        color: #fff;
+        line-height: 50px;
+        box-sizing: border-box;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #navbar__list_2 li a:hover {
+        background-color: #fff;
+        color: #000;
     }
 
 }
